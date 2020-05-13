@@ -98,7 +98,6 @@ https://flickity.metafizzy.co
   border-radius: 50%;
   /* vertically center */
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
@@ -398,7 +397,6 @@ body.compensate-for-scrollbar {
   padding: 0;
   position: absolute;
   top: 0;
-  -ms-transform-origin: top left;
   -webkit-transform-origin: top left;
           transform-origin: top left;
   -webkit-transition-property: opacity, -webkit-transform;
@@ -624,10 +622,8 @@ body.compensate-for-scrollbar {
   position: absolute;
   right: 0;
   top: 0;
-  -ms-transform: scaleX(0);
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
-  -ms-transform-origin: 0;
   -webkit-transform-origin: 0;
           transform-origin: 0;
   -webkit-transition-property: -webkit-transform;
@@ -864,7 +860,6 @@ body.compensate-for-scrollbar {
 /* line 590, src/sass/vendors/_jquery.fancybox.scss */
 .fancybox-fx-rotate.fancybox-slide--previous {
   opacity: 0;
-  -ms-transform: rotate(-360deg);
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
 }
@@ -872,7 +867,6 @@ body.compensate-for-scrollbar {
 /* line 596, src/sass/vendors/_jquery.fancybox.scss */
 .fancybox-fx-rotate.fancybox-slide--next {
   opacity: 0;
-  -ms-transform: rotate(360deg);
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
@@ -880,7 +874,6 @@ body.compensate-for-scrollbar {
 /* line 602, src/sass/vendors/_jquery.fancybox.scss */
 .fancybox-fx-rotate.fancybox-slide--current {
   opacity: 1;
-  -ms-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -2798,7 +2791,6 @@ textarea {
 /* line 161, src/sass/base/_forms.scss */
 .style-check-ios input:checked + span:after {
   -webkit-transform: translate(20px, 0);
-      -ms-transform: translate(20px, 0);
           transform: translate(20px, 0);
 }
 
@@ -3006,14 +2998,12 @@ button::-moz-focus-inner {
 /* line 54, src/sass/base/_mixins.scss */
 .fancybox-close-small:before, .fancybox-slide--image .fancybox-close-small:before, .fancybox-slide--video .fancybox-close-small:before, .fancybox-slide--iframe .fancybox-close-small:before, .fancybox-slide--html .fancybox-close-small:before {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
 /* line 58, src/sass/base/_mixins.scss */
 .fancybox-close-small:after, .fancybox-slide--image .fancybox-close-small:after, .fancybox-slide--video .fancybox-close-small:after, .fancybox-slide--iframe .fancybox-close-small:after, .fancybox-slide--html .fancybox-close-small:after {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
@@ -3047,4 +3037,132 @@ button::-moz-focus-inner {
 /* line 49, src/sass/base/_modals.scss */
 .fancybox-content {
   overflow: visible !important;
+}
+
+/* line 1, src/sass/components/_projects.scss */
+.projects-sec {
+  padding: 20px 0;
+}
+
+/* line 9, src/sass/components/_projects.scss */
+.project_title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* line 14, src/sass/components/_projects.scss */
+.project_draw {
+  position: relative;
+  width: 900px;
+  height: 900px;
+  -webkit-box-shadow: 0 0 4px 0 #000;
+          box-shadow: 0 0 4px 0 #000;
+  background: #f8f3ed;
+}
+
+/* line 21, src/sass/components/_projects.scss */
+.project_draw--1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+/* line 32, src/sass/components/_projects.scss */
+.project_draw--1 * {
+  position: absolute;
+}
+
+/* line 35, src/sass/components/_projects.scss */
+.project_draw--1 [class*='stick'] {
+  z-index: 1;
+}
+
+/* line 38, src/sass/components/_projects.scss */
+.project_draw--1 [class*='square'] {
+  z-index: 0;
+}
+
+/* line 41, src/sass/components/_projects.scss */
+.project_draw--1 .stick-1 {
+  width: 2.339062%;
+  height: 100%;
+  top: 0;
+  left: 23.6328125%;
+  background: #021a1c;
+}
+
+/* line 50, src/sass/components/_projects.scss */
+.project_draw--1 .stick-2 {
+  top: 29.78515625%;
+  left: 0;
+  width: 23.6328125%;
+  height: 5.37109375%;
+  background: #082425;
+}
+
+/* line 59, src/sass/components/_projects.scss */
+.project_draw--1 .stick-3 {
+  bottom: 24.897656%;
+  left: 0;
+  width: 23.635156%;
+  height: 2.836719%;
+  background: #030e10;
+}
+
+/* line 68, src/sass/components/_projects.scss */
+.project_draw--1 .stick-4 {
+  top: 72.265625%;
+  right: 0;
+  width: 76.5625%;
+  height: 2.63671875%;
+  background: #030d0f;
+}
+
+/* line 76, src/sass/components/_projects.scss */
+.project_draw--1 .stick-5 {
+  right: 5.6640625%;
+  bottom: 0;
+  width: 2.34375%;
+  height: 25.78125%;
+  background: #000b0d;
+}
+
+/* line 85, src/sass/components/_projects.scss */
+.project_draw--1 .stick-6 {
+  bottom: 11.1328125%;
+  right: 0;
+  width: 5.6640625%;
+  height: 3.22265625%;
+  background: #000908;
+}
+
+/* line 94, src/sass/components/_projects.scss */
+.project_draw--1 .square-red {
+  top: 0;
+  right: 0;
+  width: 74.123437%;
+  height: 72.265625%;
+  background: #c22c2d;
+}
+
+/* line 101, src/sass/components/_projects.scss */
+.project_draw--1 .square-blue {
+  bottom: 0;
+  left: 0;
+  width: 23.6328125%;
+  height: 25.390625%;
+  background: #395898;
+}
+
+/* line 109, src/sass/components/_projects.scss */
+.project_draw--1 .square-yellow {
+  bottom: 0;
+  right: 0;
+  width: 5.6640625%;
+  height: 11.13281%;
+  background: #f7df01;
 }
