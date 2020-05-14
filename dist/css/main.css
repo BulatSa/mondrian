@@ -3053,14 +3053,28 @@ button::-moz-focus-inner {
 /* line 14, src/sass/components/_projects.scss */
 .project_draw {
   position: relative;
-  width: 900px;
-  height: 900px;
-  -webkit-box-shadow: 0 0 4px 0 #000;
-          box-shadow: 0 0 4px 0 #000;
-  background: #f8f3ed;
+  width: 75vh;
+  height: 75vh;
+  -webkit-box-shadow: 0 0 8px 0 #000;
+          box-shadow: 0 0 8px 0 #000;
 }
 
-/* line 21, src/sass/components/_projects.scss */
+/* line 20, src/sass/components/_projects.scss */
+.project_draw--1:hover {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* line 22, src/sass/components/_projects.scss */
+.project_draw--1:hover [class*='stick'], .project_draw--1:hover [class*='square'], .project_draw--1:hover:after {
+  opacity: 0;
+}
+
+/* line 25, src/sass/components/_projects.scss */
+.project_draw--1:hover .project_info-icon {
+  opacity: 1;
+}
+
+/* line 29, src/sass/components/_projects.scss */
 .project_draw--1:before {
   content: '';
   position: absolute;
@@ -3068,79 +3082,105 @@ button::-moz-focus-inner {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.5;
-}
-
-/* line 32, src/sass/components/_projects.scss */
-.project_draw--1 * {
-  position: absolute;
-}
-
-/* line 35, src/sass/components/_projects.scss */
-.project_draw--1 [class*='stick'] {
-  z-index: 1;
-}
-
-/* line 38, src/sass/components/_projects.scss */
-.project_draw--1 [class*='square'] {
-  z-index: 0;
+  opacity: 1;
+  background: url(../images/1.jpg) no-repeat center;
+  background-size: cover;
+  z-index: -1;
 }
 
 /* line 41, src/sass/components/_projects.scss */
+.project_draw--1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #f8f3ed;
+  -webkit-transition: all 2.9s ease;
+  transition: all 2.9s ease;
+}
+
+/* line 49, src/sass/components/_projects.scss */
+.project_draw--1 > * {
+  position: absolute;
+}
+
+/* line 52, src/sass/components/_projects.scss */
+.project_draw--1 [class*='stick'] {
+  pointer-events: none;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* line 58, src/sass/components/_projects.scss */
+.project_draw--1 [class*='square'] {
+  pointer-events: none;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+/* line 64, src/sass/components/_projects.scss */
 .project_draw--1 .stick-1 {
-  width: 2.339062%;
+  width: 2.439062%;
   height: 100%;
   top: 0;
   left: 23.6328125%;
   background: #021a1c;
 }
 
-/* line 50, src/sass/components/_projects.scss */
+/* line 73, src/sass/components/_projects.scss */
 .project_draw--1 .stick-2 {
   top: 29.78515625%;
   left: 0;
   width: 23.6328125%;
-  height: 5.37109375%;
+  height: 4.371094%;
   background: #082425;
 }
 
-/* line 59, src/sass/components/_projects.scss */
+/* line 82, src/sass/components/_projects.scss */
 .project_draw--1 .stick-3 {
-  bottom: 24.897656%;
+  bottom: 25.097656%;
   left: 0;
   width: 23.635156%;
-  height: 2.836719%;
+  height: 2.636719%;
   background: #030e10;
+  -webkit-transform: skew(0.1deg, -0.4deg);
+          transform: skew(0.1deg, -0.4deg);
 }
 
-/* line 68, src/sass/components/_projects.scss */
+/* line 92, src/sass/components/_projects.scss */
 .project_draw--1 .stick-4 {
-  top: 72.265625%;
+  top: 71.965625%;
   right: 0;
-  width: 76.5625%;
+  width: 76.3625%;
   height: 2.63671875%;
   background: #030d0f;
+  -webkit-transform: skew(0.1deg, -0.2deg);
+          transform: skew(0.1deg, -0.2deg);
 }
 
-/* line 76, src/sass/components/_projects.scss */
+/* line 101, src/sass/components/_projects.scss */
 .project_draw--1 .stick-5 {
   right: 5.6640625%;
   bottom: 0;
-  width: 2.34375%;
+  width: 2.24375%;
   height: 25.78125%;
   background: #000b0d;
 }
 
-/* line 85, src/sass/components/_projects.scss */
+/* line 110, src/sass/components/_projects.scss */
 .project_draw--1 .stick-6 {
   bottom: 11.1328125%;
   right: 0;
   width: 5.6640625%;
-  height: 3.22265625%;
+  height: 3.022656%;
   background: #000908;
 }
 
-/* line 94, src/sass/components/_projects.scss */
+/* line 119, src/sass/components/_projects.scss */
 .project_draw--1 .square-red {
   top: 0;
   right: 0;
@@ -3149,7 +3189,7 @@ button::-moz-focus-inner {
   background: #c22c2d;
 }
 
-/* line 101, src/sass/components/_projects.scss */
+/* line 126, src/sass/components/_projects.scss */
 .project_draw--1 .square-blue {
   bottom: 0;
   left: 0;
@@ -3158,11 +3198,68 @@ button::-moz-focus-inner {
   background: #395898;
 }
 
-/* line 109, src/sass/components/_projects.scss */
+/* line 134, src/sass/components/_projects.scss */
 .project_draw--1 .square-yellow {
   bottom: 0;
   right: 0;
   width: 5.6640625%;
   height: 11.13281%;
   background: #f7df01;
+}
+
+/* line 145, src/sass/components/_projects.scss */
+.project_descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 65vh;
+  height: auto;
+  padding: 10px 15px;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  pointer-events: none;
+  background: #fff;
+}
+
+/* line 161, src/sass/components/_projects.scss */
+.project_info-icon {
+  position: absolute;
+  top: 1vw;
+  left: 1vw;
+  width: 4vw;
+  max-width: 50px;
+  min-width: 30px;
+  height: 4vw;
+  max-height: 50px;
+  min-height: 30px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+/* line 176, src/sass/components/_projects.scss */
+.project_info-icon svg {
+  display: block;
+  width: 100%;
+}
+
+/* line 180, src/sass/components/_projects.scss */
+.project_info-icon:hover {
+  opacity: 0 !important;
+}
+
+/* line 182, src/sass/components/_projects.scss */
+.project_info-icon:hover + .project_descr {
+  opacity: 1;
+  -webkit-transform: translate3d(1vw, 1vw, 0);
+          transform: translate3d(1vw, 1vw, 0);
 }
