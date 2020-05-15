@@ -1,28 +1,58 @@
 /*! gulp-start v0.0.1 | (c) 2020 Bulat | MIT License | https://github.com/BulatSa/gulp-start */
 $((function () {
   const descr = document.querySelectorAll(".descr");
-  const icons = document.querySelectorAll(".project_info-icon");
+  const headphones = document.querySelectorAll(".project_info-headphones");
   const projectDraw = document.querySelectorAll(".project_draw");
-  let projectHover = false;
+  const speechMsg = new SpeechSynthesisUtterance();
+  speechMsg.lang = 'ru-RU';
 
-  function showDescr(e) {
-    const descr = this.querySelector(".project_descr");
-    let { offsetX: x, offsetY: y } = e;
-    descr.classList.add("active");
-    descr.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-    //console.log(x, y);
+  function playInfo() {
+    //const voices = window.speechSynthesis.getVoices();
+    if (this.classList.contains('play')) {
+      // pause
+      speechSynthesis.pause();
+      this.classList.remove('play');
+      this.classList.add('pause');
+      return;
+    }
+    if (this.classList.contains('pause')) {
+      // resume
+      speechSynthesis.resume();
+      this.classList.remove('pause');
+      this.classList.add('play');
+      return;
+    }
+
+    const speakNext = () => {
+      if (arrText.length != 0) {
+        arrText.splice(0,1);
+        speechMsg.text = arrText[0];
+        speechSynthesis.speak(speechMsg);
+      } else {
+        speechSynthesis.cancel();
+        this.classList.remove('play');
+      }
+    }
+
+    headphones.forEach((function(headphone){
+      headphone.classList.remove('pause');
+      headphone.classList.remove('play');
+    }));
+    speechSynthesis.cancel();
+
+    this.classList.add('play');
+    
+    const text = this.parentNode.querySelector(".project_descr").textContent;
+    const arrText = text.split('. ');
+    speechMsg.text = arrText[0];
+    speechMsg.onend = speakNext;
+    speechSynthesis.speak(speechMsg);
   }
 
-  function hideDescr(e) {
-    const descr = this.querySelector(".project_descr");
-    descr.classList.remove("active");
-    descr.style.transform = `translate3d(0, 0, 0)`;
-    console.log(e);
-  }
+  
 
-  icons.forEach((function (icon) {
-    //project.addEventListener("mousemove", showDescr);
-    //project.addEventListener("mouseleave", hideDescr);
+  headphones.forEach((function (headphone) {
+    headphone.addEventListener("click", playInfo);
   }));
 }));
 

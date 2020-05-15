@@ -22,7 +22,7 @@
       [class*='stick'], [class*='square'], &:after {
         opacity: 0;
       }
-      .project_info-icon {
+      .project_info-icon, .project_info-headphones {
         opacity: 1;
       }
     }
@@ -168,6 +168,7 @@
   height: 4vw;
   max-height: 50px;
   min-height: 30px;
+  padding: 5px;
   border-radius: 50%;
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
   opacity: 0;
@@ -183,5 +184,32 @@
       opacity: 1;
       transform: translate3d(1vw,1vw,0);
     }
+  }
+}
+
+.project_info-headphones {
+  position: absolute;
+  top: 6vw;
+  left: 1vw;
+  width: 4vw;
+  max-width: 50px;
+  min-width: 30px;
+  height: 4vw;
+  max-height: 50px;
+  min-height: 30px;
+  padding: 5px 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #fff;
+  svg {
+    display: block;
+    width: 100%;
+  }
+  &.play {
+    box-shadow: 0 0 3px 0 #395897;
+    background: #395897;
   }
 }

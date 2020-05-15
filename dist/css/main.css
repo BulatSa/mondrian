@@ -3070,7 +3070,7 @@ button::-moz-focus-inner {
 }
 
 /* line 25, src/sass/components/_projects.scss */
-.project_draw--1:hover .project_info-icon {
+.project_draw--1:hover .project_info-icon, .project_draw--1:hover .project_info-headphones {
   opacity: 1;
 }
 
@@ -3237,6 +3237,7 @@ button::-moz-focus-inner {
   height: 4vw;
   max-height: 50px;
   min-height: 30px;
+  padding: 5px;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
@@ -3246,20 +3247,55 @@ button::-moz-focus-inner {
   background: #fff;
 }
 
-/* line 176, src/sass/components/_projects.scss */
+/* line 177, src/sass/components/_projects.scss */
 .project_info-icon svg {
   display: block;
   width: 100%;
 }
 
-/* line 180, src/sass/components/_projects.scss */
+/* line 181, src/sass/components/_projects.scss */
 .project_info-icon:hover {
   opacity: 0 !important;
 }
 
-/* line 182, src/sass/components/_projects.scss */
+/* line 183, src/sass/components/_projects.scss */
 .project_info-icon:hover + .project_descr {
   opacity: 1;
   -webkit-transform: translate3d(1vw, 1vw, 0);
           transform: translate3d(1vw, 1vw, 0);
+}
+
+/* line 190, src/sass/components/_projects.scss */
+.project_info-headphones {
+  position: absolute;
+  top: 6vw;
+  left: 1vw;
+  width: 4vw;
+  max-width: 50px;
+  min-width: 30px;
+  height: 4vw;
+  max-height: 50px;
+  min-height: 30px;
+  padding: 5px 6px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #fff;
+}
+
+/* line 207, src/sass/components/_projects.scss */
+.project_info-headphones svg {
+  display: block;
+  width: 100%;
+}
+
+/* line 211, src/sass/components/_projects.scss */
+.project_info-headphones.play {
+  -webkit-box-shadow: 0 0 3px 0 #395897;
+          box-shadow: 0 0 3px 0 #395897;
+  background: #395897;
 }
