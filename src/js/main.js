@@ -131,7 +131,7 @@ $(function () {
       $(this.element).toggleClass("animated");
     },
     {
-      offset: "85%",
+      offset: "25%",
     }
   );
 });

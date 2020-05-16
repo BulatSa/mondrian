@@ -1,0 +1,26 @@
+.header-sec {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.header {}
+
+.header_title {
+  margin-bottom: 0.3em;
+}
+
+.header_descr {
+  font-size: 18px;
+  padding-bottom: 1em;
+}
+
+.header_portrait {
+  max-width: 50vh;
+  img {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 2vh;
+    box-shadow: 0 0 10px 0 #ccc;
+  }
+}

@@ -1,15 +1,12 @@
 .projects-sec {
   padding: 20px 0;
+  overflow: hidden;
 }
 
 .projects {}
 
 .project {
   &.animated {
-    .project_title {
-      opacity: 1;
-      transform: translate3d(0,0,0);
-    }
     .project_draw {
       //opacity: 1;
       transform: translate3d(0,0,0);
@@ -70,9 +67,6 @@
 .project_title {
   margin-bottom: 20px;
   font-size: 24px;
-  opacity: 0;
-  transform: translate3d(0, 25px, 0);
-  transition: all 0.5s ease;
 }
 
 .project_draw {
@@ -271,12 +265,12 @@
 
 .project_info-icon {
   position: absolute;
-  top: 1vw;
-  left: 1vw;
-  width: 4vw;
+  top: 2vh;
+  left: 2vh;
+  width: 6vh;
   max-width: 50px;
   min-width: 30px;
-  height: 4vw;
+  height: 6vh;
   max-height: 50px;
   min-height: 30px;
   padding: 5px;
@@ -300,12 +294,12 @@
 
 .project_info-headphones {
   position: absolute;
-  top: 6vw;
-  left: 1vw;
-  width: 4vw;
+  top: 9vh;
+  left: 2vh;
+  width: 6vh;
   max-width: 50px;
   min-width: 30px;
-  height: 4vw;
+  height: 6vh;
   max-height: 50px;
   min-height: 30px;
   padding: 5px 6px;
