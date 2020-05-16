@@ -4,11 +4,75 @@
 
 .projects {}
 
-.project {}
+.project {
+  &.animated {
+    .project_title {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+    .project_draw {
+      //opacity: 1;
+      transform: translate3d(0,0,0);
+      &--1 {
+        .bg {
+          //transition: all 0s ease;
+        }
+        .stick-1 {
+          opacity: 1;
+          transition: all 0.6s ease;
+          transform: translate3d(0,0,0) rotate(0);
+        }
+        .stick-2 {
+          opacity: 1;
+          transition: all 0.6s ease;
+          transform: translate3d(0,0,0);
+        }
+        .stick-3 {
+          opacity: 1;
+          transition: all 0.6s ease;
+          transform: translate3d(0,0,0) skew(0.1deg, -0.4deg);
+        }
+        .stick-4 {
+          opacity: 1;
+          transition: all 0.6s ease;
+          transform: rotate(0deg) translate3d(0,0,0) skew(0.1deg, -0.2deg);
+        }
+        .stick-5 {
+          opacity: 1;
+          transition: all 0.6s ease;
+          transform: translate3d(0,0,0);
+        }
+        .stick-6 {
+          opacity: 1;
+          transition: all 0.6s ease;
+          transform: translate3d(0,0,0);
+        }
+        .square-red {
+          opacity: 1;
+          transition: all 0.6s ease 0.3s;
+          transform: translate3d(0,0,0) scale(1);
+        }
+        .square-blue {
+          opacity: 1;
+          transition: all 0.6s ease 0.6s;
+          transform: translate3d(0,0,0) scale(1);
+        }
+        .square-yellow {
+          opacity: 1;
+          transition: all 0.6s ease 0.6s;
+          transform: translate3d(0,0,0) scale(1);
+        }
+      }
+    }
+  }
+}
 
 .project_title {
   margin-bottom: 20px;
   font-size: 24px;
+  opacity: 0;
+  transform: translate3d(0, 25px, 0);
+  transition: all 0.5s ease;
 }
 
 .project_draw {
@@ -16,49 +80,31 @@
   width: 75vh;
   height: 75vh;
   box-shadow: 0 0 8px 0 #000;
+  //opacity: 0;
+  transform: translate3d(0, 25px, 0);
+  transition: all 0.5s ease;
   &--1 {
-    &:hover {
-      background:rgba(0,0,0,0);
-      [class*='stick'], [class*='square'], &:after {
-        opacity: 0;
-      }
-      .project_info-icon, .project_info-headphones {
-        opacity: 1;
-      }
+    [class*='stick'] {
+      pointer-events: none;
+      opacity: 1;
+      transition: all 0.3s ease;
+      z-index: 2;
     }
-    &:before {
-      content: '';
+    [class*='square'] {
+      pointer-events: none;
+      opacity: 1;
+      transition: all 0.3s ease;
+      z-index: 1;
+    }
+    .bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       opacity: 1;
-      background: url(../images/1.jpg) no-repeat center;
-      background-size: cover;
-      z-index: -1;
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
       background: #f8f3ed;
-      transition: all 2.9s ease;
-    }
-    &>* {
-      position: absolute;
-    }
-    [class*='stick'] {
-      pointer-events: none;
-      opacity: 1;
-      transition: all 0.3s ease;
-      z-index: 1;
-    }
-    [class*='square'] {
-      pointer-events: none;
-      opacity: 1;
-      transition: all 0.3s ease;
+      transition: all 0.3s ease 0.3s;
       z-index: 0;
     }
     .stick-1 {
@@ -69,6 +115,9 @@
       // 242
       left: 23.6328125%;
       background: #021a1c;
+      opacity: 0;
+      transform-origin: 50% 35%;
+      transform: rotate(20deg) translate3d(-1800%, -35%, 10px);
     }
     .stick-2 {
       // 305
@@ -77,6 +126,8 @@
       // 242*55
       width: 23.6328125%;
       height: 4.371094%;
+      opacity: 0;
+      transform: translate3d(-110%, 0px, 0);
       background: #082425;
     }
     .stick-3 {
@@ -87,7 +138,8 @@
       width: 23.635156%;
       height: 2.636719%;
       background: #030e10;
-      transform: skew(0.1deg, -0.4deg);
+      opacity: 0;
+      transform: translate3d(-110%, 0px, 0) skew(0.1deg, -0.4deg);
     }
     .stick-4 {
       top: 71.965625%;
@@ -96,7 +148,9 @@
       width: 76.3625%;
       height: 2.63671875%;
       background: #030d0f;
-      transform: skew(0.1deg, -0.2deg);
+      opacity: 0;
+      transform-origin: 100% 50%;
+      transform: rotate(-20deg) translate3d(30%, 300%, 0) skew(0.1deg, -0.2deg);
     }
     .stick-5 {
       // 58 
@@ -106,6 +160,8 @@
       width: 2.24375%;
       height: 25.78125%;
       background: #000b0d;
+      opacity: 0;
+      transform: translate3d(0, 110%,0);
     }
     .stick-6 {
       // 114
@@ -115,6 +171,8 @@
       width: 5.6640625%;
       height: 3.022656%;
       background: #000908;
+      opacity: 0;
+      transform: translate3d(110%, 0px, 0);
     }
     .square-red {
       top: 0;
@@ -122,6 +180,8 @@
       width: 74.123437%;
       height: 72.265625%;
       background: #c22c2d;
+      opacity: 0;
+      transform: translate3d(50%, -50%, 0) scale(0.3);
     }
     .square-blue {
       //242*260
@@ -130,6 +190,8 @@
       width: 23.6328125%;
       height: 25.390625%;
       background: #395898;
+      opacity: 0;
+      transform: translate3d(-50%, 50%, 0) scale(0.5);
     }
     .square-yellow {
       //58*114
@@ -138,8 +200,56 @@
       width: 5.6640625%;
       height: 11.13281%;
       background: #f7df01;
+      opacity: 0;
+      transform: translate3d(50%, 50%, 0) scale(0.3);
+    }
+    &:hover {
+      .project_draw-original {
+        opacity: 1;
+      }
+      .project_info-icon, .project_info-headphones {
+        opacity: 1;
+      }
     }
   }
+}
+
+.project_draw-original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.project_draw-elements {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: all 1.5s ease;
+  transform: translate3d(0,0,0);
+  z-index: 0;
+  &>* {
+    position: absolute;
+  }
+}
+
+.project_draw-interface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .project_descr {
@@ -156,6 +266,7 @@
   transform: translate3d(0,0,0);
   pointer-events: none;
   background: #fff;
+  z-index: 2;
 }
 
 .project_info-icon {

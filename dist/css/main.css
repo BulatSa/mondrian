@@ -3045,67 +3045,134 @@ button::-moz-focus-inner {
 }
 
 /* line 9, src/sass/components/_projects.scss */
+.project.animated .project_title {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+/* line 13, src/sass/components/_projects.scss */
+.project.animated .project_draw {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+/* line 20, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .stick-1 {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform: translate3d(0, 0, 0) rotate(0);
+          transform: translate3d(0, 0, 0) rotate(0);
+}
+
+/* line 25, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .stick-2 {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+/* line 30, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .stick-3 {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform: translate3d(0, 0, 0) skew(0.1deg, -0.4deg);
+          transform: translate3d(0, 0, 0) skew(0.1deg, -0.4deg);
+}
+
+/* line 35, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .stick-4 {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform: rotate(0deg) translate3d(0, 0, 0) skew(0.1deg, -0.2deg);
+          transform: rotate(0deg) translate3d(0, 0, 0) skew(0.1deg, -0.2deg);
+}
+
+/* line 40, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .stick-5 {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+/* line 45, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .stick-6 {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+/* line 50, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .square-red {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease 0.3s;
+  transition: all 0.6s ease 0.3s;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* line 55, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .square-blue {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease 0.6s;
+  transition: all 0.6s ease 0.6s;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* line 60, src/sass/components/_projects.scss */
+.project.animated .project_draw--1 .square-yellow {
+  opacity: 1;
+  -webkit-transition: all 0.6s ease 0.6s;
+  transition: all 0.6s ease 0.6s;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+          transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* line 70, src/sass/components/_projects.scss */
 .project_title {
   margin-bottom: 20px;
   font-size: 24px;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 25px, 0);
+          transform: translate3d(0, 25px, 0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-/* line 14, src/sass/components/_projects.scss */
+/* line 78, src/sass/components/_projects.scss */
 .project_draw {
   position: relative;
   width: 75vh;
   height: 75vh;
   -webkit-box-shadow: 0 0 8px 0 #000;
           box-shadow: 0 0 8px 0 #000;
+  -webkit-transform: translate3d(0, 25px, 0);
+          transform: translate3d(0, 25px, 0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-/* line 20, src/sass/components/_projects.scss */
-.project_draw--1:hover {
-  background: rgba(0, 0, 0, 0);
-}
-
-/* line 22, src/sass/components/_projects.scss */
-.project_draw--1:hover [class*='stick'], .project_draw--1:hover [class*='square'], .project_draw--1:hover:after {
-  opacity: 0;
-}
-
-/* line 25, src/sass/components/_projects.scss */
-.project_draw--1:hover .project_info-icon, .project_draw--1:hover .project_info-headphones {
-  opacity: 1;
-}
-
-/* line 29, src/sass/components/_projects.scss */
-.project_draw--1:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  background: url(../images/1.jpg) no-repeat center;
-  background-size: cover;
-  z-index: -1;
-}
-
-/* line 41, src/sass/components/_projects.scss */
-.project_draw--1:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #f8f3ed;
-  -webkit-transition: all 2.9s ease;
-  transition: all 2.9s ease;
-}
-
-/* line 49, src/sass/components/_projects.scss */
-.project_draw--1 > * {
-  position: absolute;
-}
-
-/* line 52, src/sass/components/_projects.scss */
+/* line 87, src/sass/components/_projects.scss */
 .project_draw--1 [class*='stick'] {
+  pointer-events: none;
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+/* line 93, src/sass/components/_projects.scss */
+.project_draw--1 [class*='square'] {
   pointer-events: none;
   opacity: 1;
   -webkit-transition: all 0.3s ease;
@@ -3113,101 +3180,191 @@ button::-moz-focus-inner {
   z-index: 1;
 }
 
-/* line 58, src/sass/components/_projects.scss */
-.project_draw--1 [class*='square'] {
-  pointer-events: none;
+/* line 99, src/sass/components/_projects.scss */
+.project_draw--1 .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   opacity: 1;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  background: #f8f3ed;
+  -webkit-transition: all 0.3s ease 0.3s;
+  transition: all 0.3s ease 0.3s;
   z-index: 0;
 }
 
-/* line 64, src/sass/components/_projects.scss */
+/* line 110, src/sass/components/_projects.scss */
 .project_draw--1 .stick-1 {
   width: 2.439062%;
   height: 100%;
   top: 0;
   left: 23.6328125%;
   background: #021a1c;
+  opacity: 0;
+  -webkit-transform-origin: 50% 35%;
+          transform-origin: 50% 35%;
+  -webkit-transform: rotate(20deg) translate3d(-1800%, -35%, 10px);
+          transform: rotate(20deg) translate3d(-1800%, -35%, 10px);
 }
 
-/* line 73, src/sass/components/_projects.scss */
+/* line 122, src/sass/components/_projects.scss */
 .project_draw--1 .stick-2 {
   top: 29.78515625%;
   left: 0;
   width: 23.6328125%;
   height: 4.371094%;
+  opacity: 0;
+  -webkit-transform: translate3d(-110%, 0px, 0);
+          transform: translate3d(-110%, 0px, 0);
   background: #082425;
 }
 
-/* line 82, src/sass/components/_projects.scss */
+/* line 133, src/sass/components/_projects.scss */
 .project_draw--1 .stick-3 {
   bottom: 25.097656%;
   left: 0;
   width: 23.635156%;
   height: 2.636719%;
   background: #030e10;
-  -webkit-transform: skew(0.1deg, -0.4deg);
-          transform: skew(0.1deg, -0.4deg);
+  opacity: 0;
+  -webkit-transform: translate3d(-110%, 0px, 0) skew(0.1deg, -0.4deg);
+          transform: translate3d(-110%, 0px, 0) skew(0.1deg, -0.4deg);
 }
 
-/* line 92, src/sass/components/_projects.scss */
+/* line 144, src/sass/components/_projects.scss */
 .project_draw--1 .stick-4 {
   top: 71.965625%;
   right: 0;
   width: 76.3625%;
   height: 2.63671875%;
   background: #030d0f;
-  -webkit-transform: skew(0.1deg, -0.2deg);
-          transform: skew(0.1deg, -0.2deg);
+  opacity: 0;
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+  -webkit-transform: rotate(-20deg) translate3d(30%, 300%, 0) skew(0.1deg, -0.2deg);
+          transform: rotate(-20deg) translate3d(30%, 300%, 0) skew(0.1deg, -0.2deg);
 }
 
-/* line 101, src/sass/components/_projects.scss */
+/* line 155, src/sass/components/_projects.scss */
 .project_draw--1 .stick-5 {
   right: 5.6640625%;
   bottom: 0;
   width: 2.24375%;
   height: 25.78125%;
   background: #000b0d;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 110%, 0);
+          transform: translate3d(0, 110%, 0);
 }
 
-/* line 110, src/sass/components/_projects.scss */
+/* line 166, src/sass/components/_projects.scss */
 .project_draw--1 .stick-6 {
   bottom: 11.1328125%;
   right: 0;
   width: 5.6640625%;
   height: 3.022656%;
   background: #000908;
+  opacity: 0;
+  -webkit-transform: translate3d(110%, 0px, 0);
+          transform: translate3d(110%, 0px, 0);
 }
 
-/* line 119, src/sass/components/_projects.scss */
+/* line 177, src/sass/components/_projects.scss */
 .project_draw--1 .square-red {
   top: 0;
   right: 0;
   width: 74.123437%;
   height: 72.265625%;
   background: #c22c2d;
+  opacity: 0;
+  -webkit-transform: translate3d(50%, -50%, 0) scale(0.3);
+          transform: translate3d(50%, -50%, 0) scale(0.3);
 }
 
-/* line 126, src/sass/components/_projects.scss */
+/* line 186, src/sass/components/_projects.scss */
 .project_draw--1 .square-blue {
   bottom: 0;
   left: 0;
   width: 23.6328125%;
   height: 25.390625%;
   background: #395898;
+  opacity: 0;
+  -webkit-transform: translate3d(-50%, 50%, 0) scale(0.5);
+          transform: translate3d(-50%, 50%, 0) scale(0.5);
 }
 
-/* line 134, src/sass/components/_projects.scss */
+/* line 196, src/sass/components/_projects.scss */
 .project_draw--1 .square-yellow {
   bottom: 0;
   right: 0;
   width: 5.6640625%;
   height: 11.13281%;
   background: #f7df01;
+  opacity: 0;
+  -webkit-transform: translate3d(50%, 50%, 0) scale(0.3);
+          transform: translate3d(50%, 50%, 0) scale(0.3);
 }
 
-/* line 145, src/sass/components/_projects.scss */
+/* line 207, src/sass/components/_projects.scss */
+.project_draw--1:hover .project_draw-original {
+  opacity: 1;
+}
+
+/* line 210, src/sass/components/_projects.scss */
+.project_draw--1:hover .project_info-icon, .project_draw--1:hover .project_info-headphones {
+  opacity: 1;
+}
+
+/* line 217, src/sass/components/_projects.scss */
+.project_draw-original {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+/* line 231, src/sass/components/_projects.scss */
+.project_draw-elements {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  z-index: 0;
+}
+
+/* line 241, src/sass/components/_projects.scss */
+.project_draw-elements > * {
+  position: absolute;
+}
+
+/* line 246, src/sass/components/_projects.scss */
+.project_draw-interface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* line 255, src/sass/components/_projects.scss */
 .project_descr {
   position: absolute;
   top: 0;
@@ -3224,9 +3381,10 @@ button::-moz-focus-inner {
           transform: translate3d(0, 0, 0);
   pointer-events: none;
   background: #fff;
+  z-index: 2;
 }
 
-/* line 161, src/sass/components/_projects.scss */
+/* line 272, src/sass/components/_projects.scss */
 .project_info-icon {
   position: absolute;
   top: 1vw;
@@ -3247,25 +3405,25 @@ button::-moz-focus-inner {
   background: #fff;
 }
 
-/* line 177, src/sass/components/_projects.scss */
+/* line 288, src/sass/components/_projects.scss */
 .project_info-icon svg {
   display: block;
   width: 100%;
 }
 
-/* line 181, src/sass/components/_projects.scss */
+/* line 292, src/sass/components/_projects.scss */
 .project_info-icon:hover {
   opacity: 0 !important;
 }
 
-/* line 183, src/sass/components/_projects.scss */
+/* line 294, src/sass/components/_projects.scss */
 .project_info-icon:hover + .project_descr {
   opacity: 1;
   -webkit-transform: translate3d(1vw, 1vw, 0);
           transform: translate3d(1vw, 1vw, 0);
 }
 
-/* line 190, src/sass/components/_projects.scss */
+/* line 301, src/sass/components/_projects.scss */
 .project_info-headphones {
   position: absolute;
   top: 6vw;
@@ -3287,13 +3445,13 @@ button::-moz-focus-inner {
   background: #fff;
 }
 
-/* line 207, src/sass/components/_projects.scss */
+/* line 318, src/sass/components/_projects.scss */
 .project_info-headphones svg {
   display: block;
   width: 100%;
 }
 
-/* line 211, src/sass/components/_projects.scss */
+/* line 322, src/sass/components/_projects.scss */
 .project_info-headphones.play {
   -webkit-box-shadow: 0 0 3px 0 #395897;
           box-shadow: 0 0 3px 0 #395897;

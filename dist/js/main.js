@@ -4,6 +4,7 @@ $((function () {
   const headphones = document.querySelectorAll(".project_info-headphones");
   const projectDraw = document.querySelectorAll(".project_draw");
   const speechMsg = new SpeechSynthesisUtterance();
+  
   speechMsg.lang = 'ru-RU';
 
   function playInfo() {
@@ -20,6 +21,9 @@ $((function () {
       speechSynthesis.resume();
       this.classList.remove('pause');
       this.classList.add('play');
+      setTimeout((function(){
+
+      }), 10000);
       return;
     }
 
@@ -48,8 +52,6 @@ $((function () {
     speechMsg.onend = speakNext;
     speechSynthesis.speak(speechMsg);
   }
-
-  
 
   headphones.forEach((function (headphone) {
     headphone.addEventListener("click", playInfo);
